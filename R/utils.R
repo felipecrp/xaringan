@@ -16,7 +16,7 @@ css_deps = function(theme) {
 
 list_css = function() {
   css = list.files(pkg_resource(), '[.](?:sa|sc|c)ss$', full.names = TRUE)
-  setNames(css, gsub('.css$', '', basename(css)))
+  setNames(css, gsub('.(?:sa|sc|c)ss$', '', basename(css)))
 }
 
 check_builtin_css = function(theme) {
