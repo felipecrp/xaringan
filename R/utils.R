@@ -15,7 +15,7 @@ css_deps = function(theme) {
 }
 
 list_css = function() {
-  css = list.files(pkg_resource(), '[.]css$', full.names = TRUE)
+  css = list.files(pkg_resource(), '[.](?:sa|sc|c)ss$', full.names = TRUE)
   setNames(css, gsub('.css$', '', basename(css)))
 }
 
